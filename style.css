@@ -324,6 +324,62 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     border-radius: 8px;
   }
+  /* NAVBAR ALIGNMENT */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* THIS pushes hamburger to right */
+  padding: 15px 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  color: #e91e63;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px; /* menu opens from right */
+    background: #fff;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
 
   .nav-links.show {
     display: flex;
@@ -333,3 +389,5 @@ nav {
     display: block;
   }
 }
+
+
